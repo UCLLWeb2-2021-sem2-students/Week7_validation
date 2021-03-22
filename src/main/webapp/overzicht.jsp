@@ -45,9 +45,7 @@
                 <p>Er zijn geen dieren </p>
             </c:otherwise>
         </c:choose>
-        <p>Het meest hongerige dier is <strong
-                id="calculatedValue">${meestHongerige.naam}
-        </strong>.</p>
+
 
     </main>
     <jsp:include page="footer.jsp"/>

@@ -37,15 +37,6 @@ public class DierDB {
         return dieren;
     }
 
-    public Dier vindMeestHongerige() {
-        if (dieren.size() == 0)
-            return null;
-        Dier meestHongerige = dieren.get(0);
-        for (Dier dier : dieren) {
-            if (dier.getVoedsel() > meestHongerige.getVoedsel())
-                meestHongerige = dier;
-        }
-        return meestHongerige;
-    }
+
 
 }

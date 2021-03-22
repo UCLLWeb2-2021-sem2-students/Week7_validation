@@ -141,7 +141,6 @@ public class Servlet extends HttpServlet {
 
     private String getOverzicht(HttpServletRequest request, HttpServletResponse response) {
         request.setAttribute("alleDieren", dierDB.vindAlle());
-        request.setAttribute("meestHongerige", dierDB.vindMeestHongerige());
         return "overzicht.jsp";
     }
 }
