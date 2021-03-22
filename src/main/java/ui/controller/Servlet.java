@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import domain.db.DierDB;
 import domain.model.Dier;
-import domain.model.DierSoort;
 
 @WebServlet("/Servlet")
 public class Servlet extends HttpServlet {
@@ -111,21 +110,8 @@ public class Servlet extends HttpServlet {
 
     private void setSoort(Dier dier, HttpServletRequest request, ArrayList<String> errors) {
         String soort = request.getParameter("soort");
-        DierSoort d = null;
-        if(soort.equals("KAT")){
-             d = DierSoort.KAT;
-        }
-        if(soort.equals("HOND")){
-            d = DierSoort.HOND;
-        }
-        if(soort.equals("KANARIE")){
-            d = DierSoort.KANARIE;
-        }
-        if(soort.equals("KIP")){
-            d = DierSoort.KIP;
-        }
         try {
-            dier.setSoort(d);
+            dier.setSoort(soort);
             request.setAttribute("soortClass", "has-success");
             request.setAttribute("soortPreviousValue", soort);
         }

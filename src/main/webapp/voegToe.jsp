@@ -40,16 +40,12 @@
                        value="${naamPreviousValue}">
             </p>
             <p class="form-group ${soortClass}">
-                <label for="soort">Soort:</label>
-                <select name="soort" id="soort" selec>
-                    <c:forEach items="${DierSoort.values()}" var="d">
-
-                            <option value="${d}">${d}</option>
-                    </c:forEach>
-                </select>
+                <label class="control-label" for="soort">Naam:</label>
+                <input id="soort" name="soort" type="text"
+                       value="${soortPreviousValue}">
             </p>
 
-            <p class="form-group ${soortClass}">
+            <p class="form-group ${voedselClass}">
                 <label for="voedsel">Aantal keer eten per dag:</label>
                 <input
                     id="voedsel" name="voedsel" type="number" class="error"

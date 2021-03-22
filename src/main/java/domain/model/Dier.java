@@ -1,15 +1,15 @@
 package domain.model;
 
 public class Dier {
-    String naam;
-    DierSoort soort;
-    int voedsel;
+    private String naam;
+    private String  soort;
+    private int voedsel;
 
     public Dier(String naam) {
         this.setNaam(naam);
     }
 
-    public Dier(String naam, DierSoort soort, int voedsel) {
+    public Dier(String naam, String soort, int voedsel) {
         this.setNaam(naam);
         this.setSoort(soort);
         this.setVoedsel(voedsel);
@@ -24,18 +24,18 @@ public class Dier {
     }
 
     public void setNaam(String naam) {
-        if (naam == null || naam.isEmpty()) {
+        if (naam.isBlank()) {
             throw new IllegalArgumentException("Geen geldige naam");
         }
         this.naam = naam;
     }
 
-    public DierSoort getSoort() {
+    public String getSoort() {
         return soort;
     }
 
-    public void setSoort(DierSoort soort) {
-        if (soort == null) {
+    public void setSoort(String soort) {
+        if (soort.isBlank()) {
             throw new IllegalArgumentException("Geen geldige soort");
         }
         this.soort = soort;

@@ -3,17 +3,16 @@ package domain.db;
 import java.util.ArrayList;
 
 import domain.model.Dier;
-import domain.model.DierSoort;
 
 public class DierDB {
     private ArrayList<Dier> dieren = new ArrayList<>();
 
     public DierDB() {
-        this.voegToe(new Dier("Albert", DierSoort.KAT, 3));
-        this.voegToe(new Dier("Piet", DierSoort.KANARIE, 1));
-        this.voegToe(new Dier("Lex", DierSoort.HOND, 2));
-        this.voegToe(new Dier("Nijn", DierSoort.KAT, 5));
-        this.voegToe(new Dier("Bruintje", DierSoort.KIP, 1));
+        this.voegToe(new Dier("Albert", "Kat", 3));
+        this.voegToe(new Dier("Piet", "Kanarie", 1));
+        this.voegToe(new Dier("Lex", "Hond", 2));
+        this.voegToe(new Dier("Nijn", "Kat", 5));
+        this.voegToe(new Dier("Bruintje", "Kip", 1));
     }
 
     public void voegToe(Dier dier) {
