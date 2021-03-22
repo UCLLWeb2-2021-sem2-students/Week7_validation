@@ -40,7 +40,7 @@
                        value="${naamPreviousValue}">
             </p>
             <p class="form-group ${soortClass}">
-                <label class="control-label" for="soort">Naam:</label>
+                <label class="control-label" for="soort">Soort:</label>
                 <input id="soort" name="soort" type="text"
                        value="${soortPreviousValue}">
             </p>
