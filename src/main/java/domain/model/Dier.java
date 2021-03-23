@@ -24,7 +24,7 @@ public class Dier {
     }
 
     public void setNaam(String naam) {
-        if (naam.isBlank()) {
+        if (naam == null || naam.isBlank()) {
             throw new IllegalArgumentException("Geen geldige naam");
         }
         this.naam = naam;

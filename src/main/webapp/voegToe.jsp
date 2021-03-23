@@ -1,7 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
-<%@ page import="domain.model.DierSoort" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,18 +26,13 @@
             </div>
         </c:if>
         <h2>Voeg je huisdier toe</h2>
-        <div id="error">
-            <ul>
-                <li>Vul een correcte naam in.</li>
-                <li>Geef een juist aantal maaltijden.</li>
-            </ul>
-        </div>
+
         <form method="POST" action="Servlet?command=voegToe">
 
             <p class="form-group ${naamClass}">
                 <label class="control-label" for="naam">Naam:</label>
                 <input id="naam" name="naam" type="text"
-                       value="${naamPreviousValue}" required>
+                       value="${naamPreviousValue}" >
             </p>
 
             <p class="form-group ${soortClass}">
