@@ -34,15 +34,17 @@
             </ul>
         </div>
         <form method="POST" action="Servlet?command=voegToe">
+
             <p class="form-group ${naamClass}">
                 <label class="control-label" for="naam">Naam:</label>
                 <input id="naam" name="naam" type="text"
-                       value="${naamPreviousValue}">
+                       value="${naamPreviousValue}" required>
             </p>
+
             <p class="form-group ${soortClass}">
                 <label class="control-label" for="soort">Soort:</label>
                 <input id="soort" name="soort" type="text"
-                       value="${soortPreviousValue}">
+                       value="${soortPreviousValue}" required>
             </p>
 
             <p class="form-group ${voedselClass}">

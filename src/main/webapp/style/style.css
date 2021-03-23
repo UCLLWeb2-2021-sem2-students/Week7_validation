@@ -136,6 +136,12 @@ form input[type="submit"] {
 	margin-top: 25px;
 }
 
+.form-group has-succes{
+	color:blue;
+}
+.form-group has-error{
+	color:red;
+}
 th {
 	text-align: left;
 }

@@ -76,10 +76,8 @@ public class Servlet extends HttpServlet {
         setNaam(dier, request, errors);
         setSoort(dier, request, errors);
         setVoedsel(dier, request, errors);
-        System.out.println("ik ben hier");
         if (errors.size() == 0) {
             try {
-                System.out.println("ik ben hier2");
 
                 dierDB.voegToe(dier);
                 return getOverzicht(request, response);
@@ -95,7 +93,7 @@ public class Servlet extends HttpServlet {
         }
     }
 
-    private void setNaam (Dier dier, HttpServletRequest request, ArrayList<String> errors) {
+    private void setNaam(Dier dier, HttpServletRequest request, ArrayList<String> errors) {
         String naam = request.getParameter("naam");
         try {
             dier.setNaam(naam);
